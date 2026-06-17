@@ -19,6 +19,5 @@ public class FarmMap: IEntityTypeConfiguration<Farm>
         builder.HasMany(x => x.Awards).WithOne().HasForeignKey(a => a.FarmId).OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(x => x.Products).WithOne(p => p.Farm!).HasForeignKey(p => p.FarmId).OnDelete(DeleteBehavior.Cascade);
 
-
     }
 }
