@@ -9,5 +9,7 @@
         public string ParentCategoryId { get; set; }
 
         public bool IsSubCategory => !String.IsNullOrWhiteSpace(CategoryName);
+
+        public IEnumerable<Product> Products { get; set; }
     }
 }

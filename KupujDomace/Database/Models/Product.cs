@@ -17,4 +17,6 @@ public class Product
     public DateTime UpdatedAt { get; set; }
 
     public Farm? Farm { get; set; }
+    public Category? Category { get; set; }
+    public Category? SubCategory { get; set; }
 }

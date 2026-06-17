@@ -14,6 +14,14 @@ namespace KupujDomace.Database.EntityTypeConfigurations
             builder.HasIndex(x => x.CategoryId);
             builder.HasIndex(x => x.SubcategoryId);
             builder.HasIndex(x => x.Name);
+
+            builder.HasOne(x=>x.Category)
+                .WithMany(x=>x.Products)
+                .HasForeignKey(x=>x.CategoryId);
+
+            builder.HasOne(x=>x.SubCategory)
+                .WithMany(x=>x.Products)
+                .HasForeignKey(x=>x.SubcategoryId);
         }
     }
 }
